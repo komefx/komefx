@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Q1. Array of numbers from 5 to 15
+        let numbersArray = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+        // Function to filter odd numbers
+    function getOddNumbers(array) {
+    return array.filter(function(number) {
+        return number % 2 !== 0; 
+    });
+}
+        // Get and print the odd numbers
+        let oddNumbers = getOddNumbers(numbersArray)
+
+        function Book(bookName, bookAuthorName,) {
+    this.bookName = bookName;
+    this.bookAuthorName = bookAuthorName;
+}
+
+// Q2. Create three book objects
+let book1 = new Book("The Bull","kome");
+let book2 = new Book("Lion Friend","jerry");
+let book3 = new Book("Mission","ike");
+
+// Store the book objects in an array
+let booksArray = [book1, book2, book3];
+
+// Iterate through the array and print out the book names
+for (let i = 0; i < booksArray.length; i++) {
+    console.log(booksArray[i].bookName);
+}
+
+// Q3. Define the Employee constructor function
+function Employee(fullName, entryDate, salary, id) {
+    this.fullName = fullName;
+    this.entryDate = entryDate;
+    this.salary = salary;
+    this.id = id;
+}
+
+// Create three instances of the Employee constructor
+let employee1 = new Employee("John Bassey", "2022-01-01", 50000, 1);
+let employee2 = new Employee("Joy Isreal", "2022-02-15", 60000, 2);
+let employee3 = new Employee("Marvel Rey", "2022-03-30", 55000, 3);
+
+// Store the employee instances in an array
+let employeesArray = [employee1, employee2, employee3];
+
+// Calculate total and average salary
+let totalSalary = 0;
+for (let i = 0; i < employeesArray.length; i++) {
+    totalSalary += employeesArray[i].salary;
+}
+
+let averageSalary = totalSalary / employeesArray.length;
+
+// Print the results
+console.log("Total Salary:", totalSalary);
+console.log("Average Salary:", averageSalary);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE.html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:white;
+                color:green;
+            }
+
+            .frm11::after{
+                content:'*';
+                color:red;
+
+            }
+            .name{
+
+                margin-top:10px;
+            }
+            .name2{
+                margin-left:10px;
+                width:500px;
+                background-color:lightgreen;
+            }
+            .input1, .input2{
+                width:250px;
+                height:50px;
+                display:block;
+                margin-left:45%;
+                margin-top:2%;
+                }
+            .check{
+                margin-left:45%;
+            }
+            .check2{
+                accent-color:green;
+            }
+            .lang2{
+                margin-left:45%;
+                padding:none;
+            }
+            .rad{
+                accent-color:green;
+            }
+            .rad1{
+                 margin-left:45%;
+            }
+            .btn{
+                height:50px;
+                width:450px;
+                border-radius:15px;
+                margin-left:28px;
+                background-color:green;
+                color:white;
+                border-style:none;
+            }
+            .btn:hover{
+                background-color: #18c418;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Students Enrollment Form</h1>
+        <p>please fill out your basic information below</p>
+        <form>
+        <div class="name">
+           <div class="name1">
+               <label>Student Name</label>
+                <input type="text" placeholder="First" class="input1">
+                <input type="text" placeholder="Last" class="input2">
+            </div>
+            <div>
+                <label class="frm11">Student Email
+                </label>
+                <input type="text" class="input1">
+            </div>
+            <div class="name">
+                <label class="frm11">Student Phone 
+                </label>  
+                <input type="text" placeholder="### ### ###" class="input1"> 
+            </div>
+            <div class="name">
+                    <label class="frm11">
+                  Student Address
+                </label>
+                <input type="text" placeholder="Street address" class="input1">
+                <input type="text" placeholder="city" class="input1">
+            <div>
+                <label for="Region" class="input">Region</label>
+                <select class="input1"placeholder="region">
+                    <option>
+                        Region
+                    </option>
+                    <option>
+                      England 
+                  </option>
+                  <option>
+                      Scotland 
+                  </option>      
+                  <option>
+                      wales
+                  </option>
+               </select> 
+            </div>     
+             <div class="post">
+                 <input type="text" placeholder="Postal/Zip code" class="input1">
+             </div>
+             <div class="country">
+                 <label for="Region" class="input">country</label>
+              <select class="input1" placeholder="region">
+                <option>
+                    country
+                </option>  
+                <option>
+                      united kingdom 
+                  </option>
+               </select> 
+             </div>
+             <div>
+                 <label class="frm11">
+                     Graduation Date
+                 </label>
+                 <p>when did you graduate from highschool</p>
+                 <input type="date" class="input1" placeholder="MM/DD/YY">
+             </div>
+             <div class="edu">
+                 <label class="frm12">
+                     Highest level of Education Completed 
+                 </label>     
+                 <input type="text" class="input1">
+             </div>
+             <div class="area">
+                 <label class="frm11">What areas would you like to study?</label>
+                 <div class="check">
+                    <p><input type="checkbox" class="check2">Mathematics 
+                     <input type="checkbox" class="check2">Physics</p>
+                     <p><input type="checkbox" class="check2">Chemistry
+                     <input type="checkbox" class="check2">Biology</p>
+                   <p><input type="checkbox" class="check2">Geography
+                     <input type="checkbox" class="check2">History</p>
+                     <p><input type="checkbox" class="check2">Literature 
+                     <input type="checkbox" class="check2">Art</p>
+                    <p><input type="checkbox" class="check2">Other</p>
+                 </div>
+             </div>
+             <div class="acc">
+                 <label class="frm11">
+                     Do you need campus accommodation 
+                 </label>
+                 <div class="rad1">
+                   <p><input type="radio" class="rad">yes</p>
+                     <p><input type="radio" class="rad">No</p>
+                 </div>
+                 
+             </div>
+             <div class="sport">
+                 <label> Do you play sport?</label>
+                 <div class="rad1">
+                      <p><input type="radio" class="rad">yes</p>
+                    <p><input type="radio" class="rad">No</p>
+                 </div>
+             </div>
+             <div class="lang">
+                 <label class="frm11">
+                     Known Languages 
+                 </label>
+                 <div class="lang2">
+                     <p><input type="checkbox" class="check2">English 
+                       <input type="checkbox" class="check2">German</p>
+                        <p><input type="checkbox" class="check2">Spanish 
+                         <input type="checkbox" class="check2">French</p>
+                          <input type="checkbox" class="check2">Others
+                 </div>
+             </div>
+             
+                 <button class="btn">SUBMIT STUDENT ENROLLMENT</button>            </div>
+             </form>
+           </div>
+        </form>
+    </body> 
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Table></title>
+    <style>
+      body{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       font-weight: bold;
+        margin-left: 50px;  
+      }
+      table{ 
+        width: 1350px;
+        border: 1px solid rgba(128, 128, 128, 0.062);
+        border-collapse:collapse;  
+        border-style: hidden;  
+      }
+     table tr{ 
+        border: 1px solid rgba(128, 128, 128, 0.116);
+        border-collapse:collapse; 
+      }
+     table th, td{padding:15px;}
+     table th{
+      text-align: left;
+      background-color: rgba(128, 128, 128, 0.151);
+     }
+    </style>
+  </head>
+  <body>
+    <h2>Recent Transactions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th><b>Transaction Id</b></th>
+          <th><b>Date</b></th>
+          <th>Amount</th>
+          <th>Collected By</th>
+          <th>Payment Method</th>
+          <th>Edited</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>1</b></td>
+          <td><b>9/12/2023</b></td>
+          <td><b>3,000</b></td>
+          <td><b>Joy</b></td>
+          <td><b>cash</b></td>
+          <td><b>false</b></td>
+        </tr>
+        <tr>
+          <td><b>2</b></td>
+          <td><b>9/12/2023</b></td>
+          <td><b>3,000</b></td>
+          <td><b>Blessing</b></td>
+          <td><b>transfer</td>
+          <td><b>false</b></td>
+        </tr>
+        <tr>
+         <td><b>3</b></td>
+          <td><b>9/12/2023</b></td>
+          <td><b>3,000</b></td>
+          <td><b>You</b></td>
+          <td><b>kind</b></td>
+          <td><b>false</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

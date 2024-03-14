@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter{
+            margin: 100px auto;
+            width: fit-content;
+        }
+        .counter button{
+            width: fit-content;
+            cursor: pointer;
+        }
+        .count{
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <button class="btn" id="decrement-btn">-</button>
+        <span class="count" id="count">2</span>
+        <button class="btn" id="increment-btn">+</button>
+    </div>
+    <script>
+        let sumNumber=(...a)=>{
+            return a.reduce((acc, el)=> acc+el,0)
+        }
+        const r= sumNumber(11,2.3,5.372);
+        console.log(r);
+        let rs = r.toFixed(1);
+        console.log(rs)
+        
+        const cb = (z) =>{
+            let result = z.toFixed(1);
+            console.log(result)
+        }
+        let sumNumberB = (cb, ...a) => {
+            let result;
+            setTimeout(()=>{
+                result = a.reduce((acc,el)=>acc + el,0);
+                cb(result);
+            },4000);
+            return result;
+        } 
+
+        const cba=sumNumberB(cb,11,2.3,5.372)
+        // console.log(rB);
+
+        const decrementBtn = document.querySelector('#decrement-btn');
+        const incrementBtn = document.querySelector('#increment-btn') 
+        const count = document.querySelector('#count')
+
+        let counter = {
+            count: 0,
+            increaseCount:function(){
+                this.count += 1 ;
+                console.log(this.count)
+            },
+            decreaseCount:function(){
+                this.count -= 1;
+            }
+        };
+        document.addEventListener('DOMContentLoaded',
+            ()=>{
+                count.innerText= counter.count
+        });
+        incrementBtn.addEventListener('click', () => {
+            counter.increaseCount();
+            count.innerText = counter.count;
+        });
+        decrementBtn.addEventListener('click', () => {
+            counter.decreaseCount();
+            count.innerText = counter.count;
+        });
+        
+    </script>
+</body>
+</html>

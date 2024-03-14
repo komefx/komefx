@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><DOCUMENT></title>
+    <style>
+      * {
+        text-decoration: none;
+        margin: 0;
+      }
+
+      .logo {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        background-color: aqua;
+      }
+      .cancel {
+        display: none;
+        flex-direction: row;
+        position: absolute;
+        top: 10px;
+        left: 180px;
+      }
+      .choir-members {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        font-size: 0.7cm;
+      }
+      .heken {
+        position: relative;
+      }
+      .span {
+        position: absolute;
+        background-color: red;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        bottom: 20px;
+        right: 0px;
+        margin-bottom: 1px;
+      }
+      nav.dropdown {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+      }
+      .dropdown a {
+        margin: 10px 20px;
+        text-decoration: none;
+      }
+      .navbar {
+        display: none;
+        border: 1px solid;
+        border-left: none;
+        border-top: none;
+        width: 235px;
+        height: 600px;
+        top: 0;
+      }
+      nav.show.dropdown,
+      nav.show.navbar,
+      nav.cancel,
+      nav.show.search-profiles {
+        display: flex;
+      }
+      .search-profiles {
+        display: none;
+        position: relative;
+        bottom: 4px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      input[type="text"] {
+        color: red;
+        border-radius: 10px;
+        text-align: right;
+        margin-bottom: 5px;
+      }
+      .profile-management ul {
+        display: none;
+        list-style: none;
+      }
+      .profile-management:hover > ul {
+        display: flex;
+        color: tomato;
+        position: relative;
+        top: -37px;
+        bottom: 100px;
+      }
+      .profile-management ul li:hover {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <h2><span class="hamburger-icon">&#9776;Adonai</span></h2>
+      <div class="choir-members">
+        <div class="heken">
+          <p>heken</p>
+          <div class="span"></div>
+        </div>
+        <p>john</p>
+        <div class="emzy"><p>emzy</p></div>
+      </div>
+    </div>
+    <nav class="navbar">
+      <nav class="cancel">X</nav>
+      <nav class="dropdown">
+        <div class="profile-management">
+          <a href="#" class="profile"
+            >Profile
+            <ul>
+              <div>
+                <li><a href="#" id="edit-profile">Edit Profile</a></li>
+                <li><a href="#" id="delete-Account">Delete Account</a></li>
+                <li><a href="#" id="Change-Account">Change-Account</a></li>
+              </div>
+            </ul>
+          </a>
+        </div>
+        <a href="#" id="search">Search</a>
+        <a href="#" id="Message">Message</a>
+        <a href="#" id="logout">Logout</a>
+      </nav>
+    </nav>
+    <nav class="search-profiles">
+      <input type="text" placeholder="search for Profiles" />
+      <a href="#">Logout</a>
+    </nav>
+
+    <script>
+      document
+        .querySelector(".hamburger-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".cancel").classList.toggle("show");
+          document.querySelector(".dropdown").classList.toggle("show");
+          document.querySelector(".navbar").classList.toggle("show");
+        });
+        document.querySelector(".cancel").addEventListener("click", function () {
+        document.querySelector(".navbar").classList.toggle("show");
+    });
+
+      document.querySelector(".emzy").addEventListener("click", function () {
+        document.querySelector(".search-profiles").classList.toggle("show");
+        document.querySelector(".cancel").classList.toggle("show");
+      });
+
+  
+    </script>
+  </body>
+</html>

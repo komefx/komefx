@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="h1">hello world</p>
+    <h2 class="h2">pot</h2>
+    <h3 class="h3">tftft</h3>
+    <script>
+    // let churchName='adonai';
+    //     headPastor='Pst B.J Bassey';
+    //     assistant='Diamond Ugo';
+    //     console.log(assistant)
+        // const h1 = document.getElementById(h1);
+        // h1.remove();
+        // const main = document.createElement('h1');
+        // const node = document.createTextNode('hello world')
+        // main.appendChild(node)
+    
+        let numbersArray=[1,2,3,4,5,6,7,8,9,10];
+        function getOddNumbers (array) {
+            return array.filter(function(number) {
+                return number % 2 !== 0;
+            });
+         } 
+         let oddNumbers = getOddNumbers(numbersArray);
+        console.log("Odd Numbers", oddNumbers);
+        // let i=oddNumbers;
+        //  for(i=0; count=i<10; count.lenght++ ){  
+        //     i %2==0;
+        //     console.log(i);}
+        let evenNumbers = getEvenNumbers (numbersArray);
+        function getEvenNumbers (array){
+            return array.filter(function(number){
+                return number % 2 == 0;
+            });
+            
+        }
+        console.log(evenNumbers)
+    </script>
+</body>
+</html>

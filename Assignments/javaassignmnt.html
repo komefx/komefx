@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .daily-task{
+            margin:100px auto;
+            width: fit-content;
+        }
+        .list{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="daily-task">
+        <form action="" class="my-task" >
+            <h4>Enter Task</h4><br>
+        <input type="text" id="task-description" placeholder="Enter task">
+        <button id="postTaskBtn" type="button">Add task</button>
+        </form>
+
+        <section class="task-list">
+            <h4>list of tasks</h4>
+            <p id="loading"></p>
+            <ul class="tasks" id="task">
+            </ul>
+        </section>
+    </div>
+    <script>
+        const taskDescription = document.querySelector('#task-description');
+        const postTaskBtn = document.querySelector('#postTaskBtn');
+        const task = document.querySelector('#task');
+        const taskList = document.querySelector('.task-list');
+        const del = document.querySelector('#delete-task')
+        postTaskBtn.addEventListener ( 'click', () => {
+            const post = {
+                description: taskDescription.value
+            }
+            console.log(post);
+            document.getElementById('loading').innerText = '...loading task'
+
+         fetch('https://jsonplaceholder.typicode.com/posts',{
+            method: 'POST',
+            body: JSON.stringify(post),
+            headers: {
+                'Content-type': 'application/josn;charset=UTF-8'
+            },
+         }) 
+         .then((res)=>{
+            console.log(res)
+           if (res.ok){ 
+            document.querySelector('.my-task').reset();
+            document.getElementById('loading').innerText = '';
+            const liNode = document.createElement('li');
+            const addTask= document.createElement('p')
+            addTask.innerText = post.description;
+            
+           
+            liNode.appendChild(addTask);
+            liNode.setAttribute(
+                'style','padding:10px;color:teal');
+
+            const child = document.querySelector('#child');
+            task.insertBefore(liNode, child);
+           } 
+         })  
+        })
+
+
+    </script>
+</body>
+</html>

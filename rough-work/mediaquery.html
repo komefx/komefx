@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            background-color: rgb(0, 255, 110);
+            height: 100%;
+        }
+        header{
+            position: fixed;
+            top:0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            background-color: aqua;
+            width: 100%;
+            height: 65px;
+        }
+        h2{
+            position: relative;
+            margin-left: 20px;
+        }
+        .header-links{
+            position: relative;
+            top:25px;
+            margin-right: 20px;
+        }
+        .header-links a{
+            text-decoration: none;
+            color: #000;
+            padding-left: 20px;
+        }
+        .header-links a:hover{
+            text-decoration:underline;
+            color: #000;
+            font-size: 0.5cm;
+            transition: 0.8s ease;
+        }
+        .main-page{
+           margin-top: 66px;
+           display: flex;
+           /* gap: 20px; */
+           height: 100%;
+        }
+        .main-body{
+            text-align: center;
+        }
+        .side-links{
+            position: relative;
+            left: -8px;
+            background-color: blue;
+            border-right: 2px solid gray;
+            width: 150px;
+            /* height:calc( 100% - 65px );
+        } */
+    }
+        .side-links a{
+            display: flex;
+            padding: 10px;
+            color: yellow;
+            font-size: 0.6cm;
+            text-decoration: none;
+        }
+        .side-links a:hover{
+            /* background-color: red; */
+            border-left: 5px solid pink;
+            background-color: red;
+        }
+        .services-offered{
+            width:500px;
+            font-size: 0.6cm;
+            margin: 30px auto;
+            background-color: rgb(51, 116, 153);
+            text-align: center;
+            justify-content: center;
+        }
+        .services a{
+            color: rebeccapurple;
+            text-decoration:none;
+            list-style: none;
+            padding: 10px;
+        }
+        .services a:hover{
+            color:chocolate;
+            background-color: pink;
+            /* border: 2px solid gray; */
+            border-radius: 5px;
+            font-size: 0.46cm;
+            transition: 0.8s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>LOGO</h2>
+        <nav class="header-links">
+            <a href="#">About US</a>
+            <a href="#">Contact US</a>
+            <a href="#">Sign UP</a>
+        </nav>
+    </header>
+    <main class="main-page">
+    <aside class="side-links">
+        <div class="side-link">
+            <a href="#">profile</a>
+            <a href="#">wallet</a>
+        </div>
+    </aside>
+    <div class="main-body">
+    <div>
+        <p>order for your services</p>
+        <p class="services-offered">We offer variety of Services which includes:</p>
+        <navbar class="services">
+            <a href="#">Fashion designing</a>
+            <a href="#">Hair-styling and Make-up</a>
+            <a href="#">Furniture Making</a>
+            <a href="#">Interior and non-interior decorations</a>
+            <a href="#">Catering</a>
+            <a href="#">Bag Making, Gift item making and Souvenours</a>
+        </navbar>
+    </div>
+    </div>
+    </main>
+</body>
+</html>

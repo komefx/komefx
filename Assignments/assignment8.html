@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .products-container {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .products {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        border-radius: 2px;
+        margin-bottom: 20px;
+      }
+      .product-info {
+        border: 2px solid whitesmoke;
+        width: 200px;
+        height: 60px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+      }
+      .product-wrapper:hover {
+        box-shadow: 0px 0px 1px 1px whitesmoke;
+      }
+      .product1 {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      .product2 {
+        background-color: purple;
+        width: 200px;
+        height: 200px;
+      }
+      .product3 {
+        background: lightgreen;
+        width: 200px;
+        height: 200px;
+      }
+      .product4 {
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+      }
+      .product5 {
+        background-color: orange;
+        width: 200px;
+        height: 200px;
+      }
+      .product6 {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+      }
+      .product7 {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+      }
+      .product8 {
+        background-color: darkmagenta;
+        width: 200px;
+        height: 200px;
+      }
+      .product9 {
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+      }
+      .product10 {
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+      }
+      .product11 {
+        background-color: yellowgreen;
+        width: 200px;
+        height: 200px;
+      }
+      .product12 {
+        background-color: skyblue;
+        width: 200px;
+        height: 200px;
+      }
+      @media only screen and (max-width: 600px) {
+        .products {
+            background-color: yellow;
+            max-width: 10%;
+          /* display: flex;
+          flex-direction: column; */
+        }
+        .product-wrapper{
+            width: 50px;
+            font-size: 0.4cm;
+        }
+      }
+      @media (width<400px) {
+        .products {
+          max-width: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="products-container">
+      <div class="products">
+        <div class="product-wrapper">
+          <div class="product1"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product2"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product3"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-wrapper">
+          <div class="product4"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="product-wrapper">
+          <div class="product5"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="product-wrapper">
+          <div class="product6"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-wrapper">
+          <div class="product7"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="product-wrapper">
+          <div class="product8"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="product-wrapper">
+          <div class="product9"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="products">
+        <div class="product-wrapper">
+          <div class="product10"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="product-wrapper">
+          <div class="product11"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="product-wrapper">
+          <div class="product12"></div>
+          <div class="product-info">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>play class</title>
+    <style>
+      *{
+        box-sizing: border-box; 
+        accent-color: green; /*accent-color is used to change the color of the ticker in checkbox or radio*/
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: italic;
+      }
+      .subjects-choice{
+        width: 100%;
+        display: flex;
+        justify-content: center;/*to position the contents left, center, right, space between*/
+        color:teal;
+        margin: 20px;
+        /*padding: 5px;*/
+      }
+      input[type="text"]{
+        top:0;
+        color: brown;
+        display:flex;
+        flex-direction: column;/*this is used to change the direction of the flex (column or row)*/
+        padding: 20px;
+        margin: 20px 0px 0px 200px;
+      }
+      .required{
+        color:red;
+        padding:5px;
+      }
+      input[type="checkbox"] {
+          top:0;
+          width: 40px;
+          margin: 0px 20px 30px 15px;
+          padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="senior">
+      <h1>choose between this subjects</h1>
+      <div>
+        <input type="checkbox" id="chemistry" name="subject" />
+        <label for="chemistry">chemistry</label>
+      </div>
+      <div>
+        <input type="checkbox" id="biology" name="subject" />
+        <label for="biology">biology</label>
+      </div>
+      <div>
+        <input type="checkbox" id="maths" name="subject" />
+        <label for="maths">maths</label>
+      </div>
+    </div>
+
+    <div class="people">
+      <h1>choose sex</h1>
+      <div>
+        <input type="radio" name="sex" id="male"/>
+        <label for="male">male</label>
+      </div>
+      <div>
+        <input type="radio" name="sex" id="female"/>
+        <label for="female">female</label>
+      </div>
+      <div>
+        <input type="radio" name="sex" id="other"/>
+        <label for="other">other</label>
+      </div>
+    </div>
+    <div id="books">
+     <div>
+        <h1> select from the drop down</h1>
+        <label for="books">books</label>
+        <select name="" id="books">
+            <option value="">select</option>
+            <option value="">obi is a boy</option>
+            <option value="">simbi goes to church</option>
+            <option value="">fowl's brain</option>
+        </select>
+      </div>
+    </div>
+        <p><label rows="3" column="7" for="other">other</label></p>
+        <textarea id="description" name="description"> </textarea>
+     <div class="subjects-choice">
+      <p>Name of subject<span class="required">*</span></p>
+      <div class="choice">
+      <input type="text" placeholder="subject name">
+      <input type="text" placeholder="subject name">
+      <input type="text" placeholder="subject name">
+    </div>
+    </div>
+    <div class="subjects-choice">
+      <p>Name of subject<span class="required">*</span></p>
+      <div class="choice">
+      <input type="text" placeholder="subject name">
+      <input type="text" placeholder="subject name">
+      <input type="text" placeholder="subject name">
+    </div>
+    </div>
+
+    
+      <h1>choose between this subjects</h1>
+    <div class="choice-subjects">
+      <p><span class="required">*</span>what are your favorite subjects?</p>
+      <div class="choice">
+      <div>
+        <label for="chem"><input type="checkbox" id="chem" name="subject" />chemistry</label>
+        <input type="checkbox" id="bio" name="subject" />
+        <label for="bio">biology</label>
+      </div>
+      
+      <div>
+        <input type="checkbox" id="math" name="subject" />
+        <label for="math">maths</label>
+        <label for="english">english</label>
+        <input type="checkbox" id="english" name="subject" />  
+      </div>
+     
+      <div>
+        <label for="commerce">commerce</label>
+        <input type="checkbox" id="commerece" name="subject" />
+        <label for="economics">maths</label>
+        <input type="checkbox" id="economics" name="subject" />  
+      </div>
+    </div>
+    </div>
+
+  </body>
+</html>

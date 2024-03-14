@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0;
+            padding: 0;
+             */
+            box-sizing: border-box;
+        }
+        /* body{
+            background-image: url('D:\Kome VSCode\rough-work\ugo\2024_Mercedes_Coupe.jpg');
+        } */
+        #hell{
+            margin: 10px;
+        }
+
+        .div1,.div2{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid black;
+            transition: all 0.8s ease-in-out;
+            /* transform: translateX(120px); */
+        }
+        #hello, #hell,#div2,.box{
+            display: none;
+        }
+        .again{
+            transform: translateX(120px);
+        }
+        .off-on{
+            width:100px;
+            height:100px;
+            transition: all 0.5s ease-in-out;
+            transform:translateX(120px);
+            border:2px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <div class="div1">hi
+        <p id="hell">hello people</p>
+    </div>
+    <button id="submit">submit</button>
+    <p id="hello">Hello world</p>
+
+    <div id="div2" class="div2 remove-add" > </div>
+    <button id="signup-btn">sign up</button>
+    
+    
+    <button id="add-remove" class="my-btn kome boy">Remove/Add</button>
+    <div class="box" id="box"></div>
+
+    <div id="sign-up">sign up here</div>
+    <button class="sign-up">sign up</button>
+
+    <script>
+        // const hey = document.createElement('h1');
+        // const hi = document.createTextNode('what the hell');
+        // hey.appendChild(hi);
+        console.log(document);
+        const div1 = document.getElementsByClassName('div1');
+        div1[0].style.color='purple'
+
+        const btn = document.getElementById('btn');
+        btn.onclick=function() {          
+            div1[0].style.color='red';
+            div1[0].style.width='100px';
+            div1[0].style.height='100px';
+            div1[0].style.cssText='transform:tanslateX(120px);color:red;padding:5px; margin: 20px auto;cursor:pointer;';
+            btn.style.color='white';
+            btn.style.background='teal';
+            document.getElementById('hell').style.display='block';
+            
+            return div1
+         }
+         const submit = document.getElementById('submit');
+         submit.onclick= function(){
+            submit.innerText='processing';
+           submit.alert ='loading page';
+            // document.getElementById('hello').style.display='block';
+            hello.setAttribute(
+                'style',
+                'font:1cm;display:block;color:red'
+            );
+            // hello.style.color='red';
+
+            }
+        const div2 = document.getElementsByClassName('div2');
+        // const again = document.getElementsByClassName('again');
+        // div2[0].style.border='1px solid red';
+        const sign = document.getElementById('signup-btn');
+        sign.onclick = function (){ 
+            div2[0].setAttribute(
+                'style',
+                'display:block;border:1px solid red;width:150px;height:150px;'                  
+            )
+            document.getElementById('div2').classList.remove('div2');
+            setTimeout(()=>{
+                div2[0].innerText='welcome';
+            }, 2000
+            )              
+        }
+        const removeAdd =document.getElementById('div2');
+        console.log(removeAdd.classList);    
+        
+        const box = document.getElementById('box');
+        const addRemove = document.getElementById('add-remove');
+         addRemove.onclick = function(){
+            box.style.display='block';
+            box.classList.toggle('off-on');
+            if(box.innerText !=='try remove me'){
+                setTimeout(
+            ()=>{
+                box.innerText='try remove me';
+            },2000) ;
+            } else{
+                box.innerText=''; 
+            }
+        };
+
+        //     setTimeout(
+        //     ()=>{
+        //         document.getElementById('box').innerText='try remove me';
+        //     },2000  
+        //  )
+
+        //     console.log(div1)
+        // }{}
+        // var ok = document.getElementsByClassName('heading');
+        // div1.insertBefore(ok,hey);
+        
+     const button = document.querySelector('.sign-up');
+     console.log(button);  
+      
+     button.addEventListener('click', ()=>{
+        event.target.style.color='blue'
+     })
+        
+     
+        
+     
+    </script>
+</body>
+</html>

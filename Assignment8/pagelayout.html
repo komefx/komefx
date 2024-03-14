@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+        html, body{
+            height: 100%;
+        }
+        .gray-color{
+            color: #161616bb
+        }
+
+        .header-container{
+            position:fixed;
+            top:0;
+            width: 100%;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+        }
+        .page-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height:50px;
+            margin: 0px 20px;   
+        }
+        .header-wrapper{
+            display: flex;
+            gap: 15px;
+        }
+        .header-navbar a{
+            color:black;
+            margin-right: 15px;
+        }
+        .pageheader-profile{
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+        .kyc{
+            display: flex;
+            gap:3px
+        }
+        .kyc-number{
+            color: #f1f1f1;
+            font-size: 10px;
+            background: teal;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 15px;       
+        }
+        .small-box {
+        position: relative;
+        background-color: red;
+        width: 5px;
+        height: 5px;
+        bottom: 20px;
+        left: 10px;
+        border-radius: 50%;
+      }
+        .profie-name-abbreviation{
+            background: teal;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: #f1f1f1;
+            font-size: 0.3cm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .page-body{
+           position: fixed;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            margin-top: 50px; 
+        }
+        .side-bar{
+            border-right: 1px solid rgba(128, 128, 128, 0.226);
+            margin-left: 15px;
+            height: calc(100% - 50px)
+        }
+        .side-bar-links{
+            height: calc(100% - 50px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 25px; 
+        }
+        .side-bar .pointing-angle{
+            position: relative;
+            color: #111010f5;
+            float: right;
+            top:15px;
+        }
+        .links a{
+            color: #161616bb;
+            margin-bottom: 15px;
+            display: flex;
+            /*flex-direction: column;
+            gap: 15px;*/
+        }
+        .home-icon{
+            margin-right: 10px;
+        }
+        .down-arrow, .pointing-angle{
+            color: #162116;
+            font-size: 0.2cm;
+            font-weight: 1500;   
+        }
+        .links a:hover{
+            background-color: whitesmoke;
+            border-left: 3px solid teal;
+            height:30px;
+            padding-top: 5px;
+            padding-left: 15px;
+            margin-left: -15px;
+        }
+        .settings-and-logout{
+            margin-top: 7px;
+        }    
+        .settings, .logout{
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+        }
+        .settings span{
+            color: #000000be;
+            font-weight: 550;
+            margin-bottom: 20px;
+        }
+        .main-container{
+            margin: 30px;
+            width:calc(100% - 200px);
+            overflow-y: scroll;
+        }    
+        .account{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;     
+        }
+        .balances{
+            border: 1px solid rgba(128, 128, 128, 0.226);
+            border-radius: 5px;
+            width: 250px;
+            height: 70px;
+            padding: 15px 10px;
+        }
+        .account-balance, .on-hold-balance{
+                display: flex;
+                gap: 30px;
+                margin-bottom: 10px;   
+        }
+        .eye-icon{
+            cursor: pointer;
+        } 
+        .guide-doc-and-api p{
+            margin-top: 10px;
+        }
+        .guide-doc-and-api{
+            display: flex;
+            gap: 20px;
+        }
+        .guide-doc,
+        .api-keys{
+            padding: 20px;
+            border: 1px solid rgba(128, 128, 128, 0.226);
+            width: 600px;
+        }
+        .guide-doc-and-api button{
+            border: none;
+            border-radius: 5px;
+            background-color: darkgreen;
+            color: #f1f1f1;
+            padding: 5px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">       
+            <div class="page-header">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <h4>Logo</h4>
+                    </div>
+                    <nav class="header-navbar">
+                        <a href="#">Overview</a>
+                        <a href="#">Documentation</a>
+                        <a href="#">Api Reference</a>
+                        <a href="#">Examples</a>
+                    </nav>
+                </div>
+                <div class="pageheader-profile">
+                    <div class="kyc">
+                        <p>KYC Invoice</p>
+                        <div class="kyc-number">
+                            <span>2</span>
+                        </div>
+                    </div>   
+                    <a>
+                        <i class="fa-regular fa-bell">
+                            <div class="small-box"></div>
+                        </i>
+                    </a>
+                    <div class="profie-name-abbreviation"><span>G</span></div>
+                </div>
+            </div>
+    </header>
+    <div class="page-body">
+        <aside class="side-bar">
+            <span class="pointing-angle">&#11164</span>
+            <div class="side-bar-links">  
+                <div class="side-bar-link"> 
+                    <div class="links">
+                        <a href="#"><span class="home-icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>Dashboard
+                        </a>
+                        <a href="#"><span class="home-icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>Transaction
+                            <span class="down-arrow">&#11167</span>
+                        </a>
+                        <a href="#"><span class="home-icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>Customers
+                        </a>
+                        <a href="#"><span class="home-icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>Business Overdraft
+                        </a>
+                        <a href="#">
+                            <span class="home-icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>Developer Tools
+                        </a>
+                    </div>
+                </div>            
+                <div class="side-bar-link">
+                    <b>Your Account</b>
+                    <div class="settings-and-logout">
+                        <div class="settings">
+                            <ion-icon name="settings-outline"></ion-icon>
+                            <span>settings</span>
+                        </div>
+                        <div class="logout">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                            <p class="gray-color">Logout</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="main-container">
+            <section class="account">
+                <div class="balances">
+                    <div class="account-balance">
+                        <p class="gray-color">Account Balance </p>
+                        <span class="eye-icon gray-color"><ion-icon name="eye-off-outline"></ion-icon></span>
+                    </div>
+                    <b>&#8358; 300,000.00</b>
+                </div>
+                <div class="balances">
+                    <div class="on-hold-balance">
+                        <p class="gray-color">On-Hold Balance</p>
+                        <span class="eye-icon gray-color"><ion-icon name="eye-off-outline"></ion-icon></span>
+                    </div>
+                    <b>&#8358; 300,000.00</b>
+                </div>
+            </section>
+           <section class="guide-doc-and-api">
+                <div class="guide-doc">
+                    <b>Guide and Doc</b>
+                    <p class="gray-color"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iusto eius accusantium.</p>
+                    <button>View Doc</button>
+                </div>
+                <div class="api-keys">
+                    <b>Api keys</b>
+                    <p class="gray-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quidem earum itaque.</p>
+                    <button>Coming Soon</button> 
+                </div>
+           </section>
+           <div class="main-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores perspiciatis nihil dicta. Quis consequatur dignissimos suscipit aliquam perferendis cumque dolorem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum doloribus non, in, consequuntur iure suscipit laboriosam labore, qui voluptas sunt expedita voluptates fuga. Suscipit unde veritatis quidem quasi, voluptate voluptatem provident rerum. Tempore deserunt tenetur possimus cupiditate laboriosam, repellendus asperiores illum assumenda amet reiciendis maxime atque. Et ut explicabo magnam quia illum deleniti at excepturi ipsa consequatur consequuntur eveniet nihil corporis suscipit saepe nisi, distinctio quas doloribus ducimus facilis itaque quidem laudantium? Facere omnis aliquam commodi laudantium esse ratione animi quas nisi suscipit consectetur eveniet illo quos, itaque laborum repudiandae est, necessitatibus consequuntur, iusto possimus exercitationem corrupti! Iste, qui ad. Tempora nesciunt impedit iste labore quidem dolorem quo mollitia ducimus incidunt, alias maiores quibusdam deleniti dolore sint eaque repellat doloremque sapiente necessitatibus quas eius suscipit excepturi laborum sed. Ex natus nemo, sed cum sunt consequuntur voluptatem velit necessitatibus, ipsa praesentium soluta? Neque quibusdam dignissimos alias hic aut velit iusto, beatae qui consectetur. Aperiam perferendis debitis nesciunt aliquid vitae maiores. Natus veniam consectetur itaque illo asperiores atque, iste eius saepe deleniti cupiditate dolores recusandae ipsa deserunt ea fugit nihil beatae, sunt sequi non ab id nam? Laudantium illo a facilis, minima totam ea amet quasi incidunt iste fuga similique impedit id ipsum esse quia quos. Ab ipsa consequuntur dolores ad iste, officiis nobis maxime sunt alias asperiores magni inventore harum fugit similique iure saepe optio magnam eos doloremque voluptates quos! Suscipit nemo atque repudiandae nesciunt quam aliquam ut numquam error. Necessitatibus impedit dignissimos fugit repellat nihil natus quia enim commodi unde nobis adipisci nam harum ut error voluptatibus saepe veritatis voluptatum quasi consectetur tenetur consequatur expedita, pariatur iusto officiis! Perspiciatis ut cumque tenetur iste veritatis ratione laudantium incidunt distinctio doloribus deserunt. Repudiandae, quo iure perferendis a earum in ducimus cupiditate dignissimos asperiores vel dicta possimus commodi eveniet beatae repellendus fugiat impedit! Facere fuga necessitatibus atque voluptatibus iste at minima assumenda obcaecati debitis accusamus esse deserunt iure, sapiente autem dicta quos, ullam quasi voluptates aspernatur vel totam suscipit. Obcaecati odit temporibus quidem ducimus, labore repudiandae esse, perspiciatis, iusto asperiores quaerat ratione. Minus illo nemo ab. Nisi expedita voluptas cum atque eius! Quis nam totam consequuntur pariatur cupiditate, explicabo sit itaque vero praesentium hic quos officia minima nisi temporibus error placeat. Iure esse ratione, vel facere facilis, at consequatur animi corrupti quidem ipsam provident eligendi harum ducimus atque, labore soluta quam eaque sed ipsa nemo! Consectetur, blanditiis. Qui magni tempora odio, esse nihil laudantium, corporis tenetur excepturi nostrum quasi nam cupiditate omnis ut dolor blanditiis! Suscipit aperiam iusto iste aspernatur ea atque nobis pariatur recusandae ullam quos praesentium, unde enim obcaecati id debitis eum vel. Qui voluptatibus ea dolorum exercitationem saepe? Aliquid autem molestiae inventore quas repellat sint consequuntur reiciendis hic sit dignissimos ratione aperiam quasi harum accusamus quo cumque enim, at porro numquam nulla fuga non. Ut dignissimos neque vel sunt molestiae expedita assumenda porro odio vero adipisci natus error deleniti nemo doloribus tenetur quisquam dolorem, distinctio ullam eaque fuga aliquid! Ad, itaque. Ex ut obcaecati porro dignissimos, repellendus repudiandae pariatur. Nostrum iure perferendis harum sequi minus. Aut dolorum neque dignissimos alias expedita. Vitae facilis autem tempora sint officia excepturi rerum sunt id error, nobis architecto, iste non? Perspiciatis sequi obcaecati, hic laudantium, pariatur quae voluptates repellendus dolores rem inventore quaerat minus accusamus ipsum possimus. Non debitis iusto iste commodi, exercitationem maiores porro saepe eligendi aut nemo laboriosam numquam sed quae blanditiis? Laboriosam numquam, adipisci corrupti odit labore excepturi asperiores eius facilis corporis quidem, nulla optio nisi vero iste alias tempora odio nostrum ducimus quibusdam beatae. Doloribus, quos? Quia quo accusamus excepturi velit dolore, id non molestias consequatur tenetur? Aspernatur tenetur odit, deleniti molestiae pariatur voluptatibus et nostrum, aliquam ullam distinctio modi, sapiente officia expedita nihil quod! Error ex sit qui sed ipsam voluptate dolores odio et? Aut ad placeat excepturi sit enim quisquam perspiciatis quas similique ex. Fugit, quis aut veritatis accusantium explicabo minima voluptates quisquam possimus minus qui laborum sapiente vitae similique ullam tempore corporis eius sit ipsa ab. Consequatur, quisquam deserunt voluptate ad id fuga cumque nemo molestias nostrum mollitia, consectetur eveniet odit! Incidunt mollitia iste expedita veritatis qui dolores commodi, unde quisquam voluptatum cumque laborum sed nemo, rerum odio asperiores quod recusandae, quam maxime. Labore, corporis nesciunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quis officiis corporis voluptatibus accusamus, impedit, sit omnis neque eius, recusandae eos. Totam deleniti autem modi repudiandae non delectus optio, perspiciatis animi maxime sed vitae est sequi odio minima ex aperiam fuga esse facilis quisquam, explicabo, asperiores iste sit aliquam doloremque! Ratione, explicabo nisi. In eius vel rerum quae fugit nulla veniam enim? Blanditiis aliquam harum rem illum corporis distinctio optio vitae, eos dolor cupiditate doloribus repellendus beatae enim nihil quaerat quae ut possimus, velit odio. Blanditiis doloremque, dolores accusantium corporis cupiditate odio dignissimos, minus nostrum eius error neque reprehenderit? Temporibus aliquid vitae officiis iure vero alias porro culpa impedit sunt, labore expedita sequi possimus ab mollitia quis cum dolor aspernatur atque nemo nulla deleniti est. Quam placeat corporis cum praesentium dolores expedita reiciendis aspernatur voluptatum maiores est quibusdam fugit, harum, tempora quia a necessitatibus libero, quas labore? Architecto illum in impedit itaque ex culpa dignissimos aperiam optio facilis odio minima, perspiciatis ea alias quo totam dolores obcaecati nesciunt nihil explicabo magni autem. Eum vitae corrupti labore consequuntur excepturi nesciunt magnam aliquid dicta, praesentium porro temporibus enim sint atque dolores, velit similique earum iure illum veritatis repellendus voluptatum omnis? Quam laudantium nobis voluptate provident animi assumenda iste in porro velit ipsa magnam maxime dolorem rerum, suscipit vero neque numquam eveniet ipsam! Magnam culpa id vitae suscipit praesentium expedita neque. Quibusdam consequatur repellat illum voluptatum mollitia in sapiente iusto iure, sint aperiam ipsam nisi quo repudiandae esse sequi quam laudantium facilis vero voluptatibus. Optio quasi sit quod minima quia tempore iure ut delectus atque alias totam, animi ab eos voluptatibus neque, ratione laborum ipsam ex fuga excepturi eum veniam. Mollitia voluptate pariatur doloribus saepe delectus, reiciendis alias nihil iure debitis quo aut cupiditate officia obcaecati qui! Adipisci consequatur, consectetur, a inventore debitis exercitationem necessitatibus provident beatae autem, aspernatur dolore officiis ducimus ratione cupiditate repudiandae cum eaque in praesentium voluptates quod dolorem saepe! Excepturi consequatur ipsam corrupti? Deleniti, necessitatibus fugit? Aliquid vero nam minus ea? Saepe ex alias, deserunt, tempora odio in iusto amet ab fugiat quia enim eos cumque modi voluptates sapiente rerum tenetur consectetur expedita non sit sint laudantium dolores? Ratione odit ipsum cupiditate, molestiae quas nobis sunt! Repudiandae qui est laudantium facere dolores quasi nemo ipsam libero reprehenderit maiores? Eum architecto dignissimos earum cumque, voluptatibus, soluta inventore iste error qui corrupti consequatur temporibus quas provident eaque hic velit quae. Reiciendis aspernatur veritatis ratione, a dicta ex ipsa voluptas culpa ipsum odio voluptatibus natus tempora blanditiis. Nostrum possimus soluta aliquid ea nesciunt quas, atque, quod unde asperiores in vitae minus quae sequi laudantium hic vero obcaecati iste. Possimus voluptatem expedita sapiente, modi facilis dolore corrupti quo molestias voluptates asperiores esse cumque dignissimos. Neque voluptates magni esse consequuntur blanditiis impedit iste laboriosam expedita vero, aspernatur necessitatibus! Fugiat aut, aliquid minima nostrum repellendus aperiam accusantium corrupti? Accusamus commodi inventore non veritatis. Veritatis ab accusamus debitis similique alias? Corporis doloribus facilis illum repudiandae officia iusto. Quaerat cumque asperiores omnis quis vel nulla id quasi deleniti assumenda cum. Numquam, quas architecto? Ex dolore esse repudiandae qui, similique, illo veniam exercitationem quae quam quisquam aut incidunt error hic libero enim, aliquid soluta? Dignissimos vel tenetur maxime tempora adipisci hic quidem modi quasi iusto fugit, tempore, pariatur sint ratione maiores, odio sunt. Eveniet obcaecati beatae omnis repellendus dignissimos ea quam voluptatibus reprehenderit ipsam ad pariatur exercitationem culpa, quaerat minus reiciendis! Unde voluptatibus iste temporibus ipsum atque quibusdam delectus mollitia voluptates dicta a eos rem, enim at magni animi, eveniet, nostrum sequi quasi ut earum amet excepturi suscipit eum sunt. Possimus esse minus dolorum corrupti soluta? Culpa inventore ad aliquid fugiat deserunt iusto, magni incidunt ipsum, unde consectetur officiis magnam perferendis. Quidem magnam sequi et voluptates odit obcaecati quod nisi harum repellendus aut sit corporis alias, laudantium blanditiis ut veniam esse architecto similique officiis atque? Quod sit nisi sed, delectus necessitatibus aperiam sapiente minus, voluptate iste dolor inventore vel id! Aspernatur incidunt perspiciatis et deserunt blanditiis temporibus quia! Dicta odit, itaque, repellendus saepe architecto quod cum ad perspiciatis facere nostrum nemo molestiae quasi officiis. Nam facere exercitationem molestias placeat, est fugit inventore debitis rerum eum, deleniti a maxime sapiente libero repudiandae minima? Ab quidem molestias a dolores odio.
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+</body>
+</html>

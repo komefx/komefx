@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+      *{
+          margin: 0;
+          padding: 0;
+      }
+     hr{
+        width: 350px;
+        margin-top: 10px;
+        margin-left: 5px;
+     } 
+    .image {
+      width: 300px;
+      margin-left: 30px;
+      margin-top: 15px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .image img {
+      width: calc(100% + 50px); /* increase width by 100px to crop sides */
+      margin-left: -30px; /* remove 50 pixels from the left side */
+      margin-right: 20px; /* remove 50 pixels from the right side */
+      border: 5px solid white;
+      border-radius: 20px;
+    }
+    p{
+        margin-top: 5px;
+        margin-left: 30px;
+        font-weight: 700px;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <hr> 
+  <div class="image">
+    <img src="/2024_Mercedes_Coupe.jpg" alt="2024 mercedes">
+  </div>
+  <p>2024 Mercedes GLC Coupe Priced At <br> $58,150 But There's A catch.</br></p>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOG IN</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(/2024_Mercedes_Coupe.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(15px);
+        z-index: -1;
+        
+        
+      }
+      body,
+      .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      form {
+        top:50%;
+        width: 300px;
+        border: none;
+        border-radius: 0px 100px 0px 0px;
+        background-color: rgba(90, 300, 0.623);
+      }
+      .heading {
+        color: rgba(0, 0, 0, 0.644);
+        font-size: 20px;
+      }
+      .alert {
+        background-color: hwb(350 75% 0% / 0.39);
+        width: 300px;
+        color: rgb(219, 14, 14);
+        font-weight: 500px;
+        border-radius: 5px;
+        border-left: 6px solid red;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 15px;
+        cursor: pointer;
+      }
+      .details {
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+      .password {
+        margin-bottom: 40px;
+        padding: 0px 50px 0px 0px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 300px;
+        border: 3px solid white;
+        border-style: groove;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding: 10px;
+      }
+      button {
+        background-color: skyblue;
+        width: 100%;
+        color: #162938;
+        border: none;
+        border-radius: 15px 15px 0px 0px;
+        margin-top: 25px;
+        padding: 15px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: yellow;
+        color: #162938;
+      }
+      a {
+        text-decoration: none;
+        color: blue;
+        font-weight: 500px;
+      }
+      .peru {
+        display: block;
+        margin-left: 27px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <p class="heading"><b>LOG IN</b></p>
+      <p class="alert">Invalid login details</p>
+      <div class="details">
+        <label for="username"><b>Matric/Application number</b></label> <br />
+        <input type="text" placeholder="Enter username" name="username" />
+      </div>
+
+      <div class="password">
+        <label for="password"><b>Password</b></label>
+        <br />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          password="password"
+          required
+        />
+      </div>
+      <div class="peru">
+        <input type="checkbox" checked="unchecked" />Remember Me
+        <a href="#" type="text"><b>Forgot Password?</b></a>
+      </div>
+      <button type="submit">SIGN IN</button>
+    </form>
+  </body>
+</html>

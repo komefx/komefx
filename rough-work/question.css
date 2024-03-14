@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  background: transparent;
+  width: 90%;
+  max-width: 600px;
+  margin: 100px Auto 0;
+  box-shadow: 0 0 10px #26bf47;
+  border-radius: 10px;
+  padding: 30px;
+  border-color: #26bf47;
+}
+.app h1 {
+  color: #26bf47;
+  text-align: center;
+  border-bottom: 10px;
+  padding: 10px;
+}
+.quiz {
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+}
+.btn {
+  color: #f1f1f1;
+  width: 100px;
+  height: 50px;
+  margin: 10px 80px 70px;
+  padding: 10px;
+  background: red;
+  cursor: pointer;
+  transition: all 0.3s ease 0.3s;
+}
+.btn:hover {
+  opacity: 10px;
+  color: #162938;
+}
+#button ol {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 60px;
+  cursor: pointer;
+  display: inline-table;
+}
+#button ol li {
+  float: left;
+  text-align: center;
+  line-height: 20px;
+  height: 50px;
+  width: 500px;
+  color: white;
+  list-style: none;
+  font-size: 0.8cm;
+  opacity: 1.5;
+  cursor: pointer;
+}
+#button ol li ol {
+  display: none;
+}
+#button ol li:hover > ol {
+  margin-top: -100px;
+  margin-bottom: 50px;
+  opacity: 10px;
+  display: block;
+}
+.quiz .btn:focus ~ button,
+.quiz .btn:valid ~ button {
+  bottom: 5px;
+}
+#button ol li:hover {
+  display: inline-table;
+}
+#button ol li ol li {
+  top: 30px;
+  padding: 10px;
+  position: relative;
+  color: #162938;
+}
+#button ol li ol li ol {
+  position: absolute;
+  left: -10px;
+  top: 100px;
+}
+.navbar {
+  margin-right: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.096);
+  border: 1px solid black;
+  cursor: pointer;
+}
+.navigation-bar {
+  text-align: right;
+}
+.navbar:hover {
+  opacity: 100%;
+  background-color: #fff;
+  color: #262626;
+}
